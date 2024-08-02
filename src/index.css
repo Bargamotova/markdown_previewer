@@ -1,0 +1,142 @@
+* {
+  box-sizing: inherit;
+
+}
+
+html {
+  box-sizing: border-box;
+
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.markdown {
+  padding: 10px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.markdown__title {
+  text-align: center;
+  font-family: monospace;
+  display: block;
+}
+
+.markdown_block {
+  padding: 10px;
+  box-shadow: 0px 0px 10px #b4b4b4;
+  margin-bottom: 20px;
+}
+
+.previewer_block {
+  padding: 10px;
+  background: #242424;
+  box-shadow: 0px 0px 10px #b4b4b4;
+}
+
+#editor {
+  width: 99%;
+  min-height: 200px;
+  height: 50dvh;
+  overflow-y: auto;
+  resize: vertical;
+  outline: none;
+  padding: 10px;
+}
+
+#preview {
+  padding: 10px;
+  background: #fff;
+  color: #242424;
+}
+
+#preview img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  max-width: 90%;
+}
+
+#preview h1,
+#preview h2 {
+  border-bottom: 2px solid #b4b4b4;
+}
+
+#preview p code {
+  font-weight: bold;
+  color: #000;
+}
+
+#preview pre {
+  background: rgb(249, 181, 46);
+  font-weight: bold;
+  padding-left: 5px;
+  padding-top: 5px;
+  width: 99%;
+}
+
+#preview pre code {
+  text-wrap: pretty;
+
+}
+
+#preview blockquote {
+  border-left: 3px solid rgb(91, 156, 0);
+}
+
+#preview blockquote p {
+  margin-left: 5px;
+  color: rgb(91, 156, 0);
+}
+
+#preview table {
+  border: 2px solid #b4b4b4;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+#preview table tr th,
+#preview table tr td {
+  padding: 5px;
+  border: 1px solid #b4b4b4;
+}
+
+#preview ol,
+#preview ul {
+  margin: 0;
+  padding-left: 15px;
+  margin-bottom: 1em;
+}
+
+
+
+@media only screen and (min-width: 950px) {
+  .markdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .markdown_block,
+  .previewer_block {
+    height: 90vh;
+    overflow: hidden;
+    border: 6px solid #242424;
+
+  }
+
+  #editor {
+    height: 100%;
+  }
+
+  #preview {
+    height: 90vh;
+    overflow-y: auto;
+  }
+}
